@@ -1,2 +1,5 @@
 # SeeAndSpeak
-An innovative smart hat which sees and tells you what it sees
+An innovative smart hat which sees and tells you what it sees.
+
+![Architecture](assets/architecture.png)
+
