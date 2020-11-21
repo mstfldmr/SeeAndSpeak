@@ -2,14 +2,21 @@ from gpiozero import Button
 from signal import pause
 
 from picamera import PiCamera
+from datetime import datetime
+
+
+
+camera = PiCamera()
+camera.resolution = (1024, 768)
+
 
 
 def capture():
   print('Capturing picture...')
-  camera = PiCamera()
-  camera.resolution = (1024, 768)
-  camera.capture('capture.jpg')
-  print('Picture saved')
+  now = datetime.now()
+  timestamp = now.strftime('%Y%m%d%H%M%S')
+  camera.capture(timestamp + '.jpg')
+  print('Picture saved: ' + timestamp)
 
 
 
